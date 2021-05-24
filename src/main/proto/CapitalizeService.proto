@@ -1,0 +1,15 @@
+syntax = "proto3";
+package loopme.test;
+option java_multiple_files = true;
+option java_outer_classname = "LoopmeTestProto";
+option java_package = "com.loopme.test";
+service CapitalizeService {
+    rpc Capitalize (CapitalizeRequest) returns (CapitalizeResponse){}
+}
+message CapitalizeRequest {
+    // max length 100
+    string str = 1;
+}
+message CapitalizeResponse {
+    string str = 1;
+}
